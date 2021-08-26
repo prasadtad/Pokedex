@@ -17,3 +17,4 @@ We want to run the application securely over port 443 in production. The steps i
 
 Other things to consider are putting an api gateway for security using an api key, rate limiting or geographic limiting for public apis and a cdn for serving frequent requests. If we want to make the app more available, we can setup a kubernetes cluster with ingress and load balancing to run the app over multiple pods. This would also allow us to do rolling updates. We definitely want to use a continuous integration/continuous deployment system to run the tests and then deploy the application to a uat environment that can then be promoted to the production environment.
 
+There is also value in adding tests for the controllers and in the testing the di container before going to production.

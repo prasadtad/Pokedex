@@ -11,7 +11,7 @@ namespace Pokedex.Library
         public static IServiceCollection AddPokedex(this IServiceCollection services)
         {
             return services.AddSingleton<PokeApiClient>(s => new PokeApiClient())
-                           .AddSingleton<IFunTranslationsApiService, FunTranslationsApiService>()
+                           .AddSingleton<IPokeApiService, PokeApiService>()
                            .AddSingleton<IFunTranslationsApiService, FunTranslationsApiService>()
                            .AddSingleton<IPokedexService, PokedexService>();
         }
