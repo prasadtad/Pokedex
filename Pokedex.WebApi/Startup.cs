@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Pokedex.Library;
+using Pokedex.Library.Models;
 
 namespace Pokedex.WebApi
 {
@@ -31,6 +33,12 @@ namespace Pokedex.WebApi
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Pokedex.WebApi", Version = "v1" });
             });
+
+            services.AddOptions();
+            services.Configure<PokedexSettings>(Configuration.GetSection("Pokedex"));
+
+            services.AddHttpClient();
+            services.AddPokedex();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
