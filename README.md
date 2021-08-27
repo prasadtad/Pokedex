@@ -7,6 +7,7 @@
 3. To download the repository, execute `git clone https://github.com/prasadtad/Pokedex.git`
 3. To build the docker image, execute `docker build -t prasadtad/pokedex .`
 4. To run the application container, execute `docker run -p 80:80 prasadtad/pokedex`
+5. Please note that you need the correct settings in appsettings.json to run the app
 
 ## Production instructions
 
